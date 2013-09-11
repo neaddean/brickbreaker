@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdl", "sdl\sdl.vcxproj", "{23517250-E210-485C-AE64-B30DF876543C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "brickbreaker", "brickbreaker\brickbreaker.vcxproj", "{7D14F18C-BEEA-402F-9F44-86F17972158D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23517250-E210-485C-AE64-B30DF876543C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{23517250-E210-485C-AE64-B30DF876543C}.Release|Win32.ActiveCfg = Release|Win32
+		{23517250-E210-485C-AE64-B30DF876543C}.Release|Win32.Build.0 = Release|Win32
+		{7D14F18C-BEEA-402F-9F44-86F17972158D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7D14F18C-BEEA-402F-9F44-86F17972158D}.Debug|Win32.Build.0 = Debug|Win32
+		{7D14F18C-BEEA-402F-9F44-86F17972158D}.Release|Win32.ActiveCfg = Release|Win32
+		{7D14F18C-BEEA-402F-9F44-86F17972158D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

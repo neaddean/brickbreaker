@@ -1,0 +1,12 @@
+﻿Build started 5/30/2013 18:08:32.
+     1>Project "C:\Users\Dean\documents\visual studio 2010\Projects\sdl\other thing\other thing.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\other thing.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       FinalizeBuildStatus:
+         Deleting file "Debug\other thing.unsuccessfulbuild".
+         Touching "Debug\other thing.lastbuildstate".
+     1>Done Building Project "C:\Users\Dean\documents\visual studio 2010\Projects\sdl\other thing\other thing.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.06
