@@ -75,6 +75,8 @@ int main( int argc, char* args[] )
 
 		blocker.showbar();
 
+		if (blocker.bricks.level_done) quit = true;
+
         //Update the screen
 		if(SDL_Flip(screen) == -1) return 1;
 

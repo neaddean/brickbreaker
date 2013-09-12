@@ -7,33 +7,49 @@
 #include <cmath>
 
 
-gameboard::gameboard()
-{
+
+void gameboard::LoadLevel() {
 	std::ifstream levelfile("levels.txt");
-	for (int row = 0; row<16; row++)
-		{
-			for (int col = 0; col<9; col++)
-			{
+	level++;
+	char levelfinder;
+	while (1){
+		levelfile >> levelfinder;
+		if (levelfinder == ':') {
+			levelfile >> levelfinder;
+			if (levelfinder == level) break;
+		}
+	}
+	for (int row = 0; row<16; row++){
+			for (int col = 0; col<9; col++)	{
 				levelfile >> matrix[row][col];
 			}
 		}
 }
 
+gameboard::gameboard() 
+{
+	level = '0';
+	level_done= false;
+	LoadLevel();
+}
+
 void gameboard::showbricks()
 {
+	bool IsLevelDone = true;
 	for (int row = 0; row<16; row++)
 		{
 			for (int col = 0; col<9; col++)
 		{
 			switch (matrix[row][col])
 			{
-				case 0: break;
-				case 1:  apply_surface( 3+col*BRICK_WIDTH, 1+row*BRICK_HEIGHT, orange1, screen);     break;
-				case 2:  apply_surface( 3+col*BRICK_WIDTH, 1+row*BRICK_HEIGHT, green1, screen);      break;
+				case 0:  break;
+				case 1:  apply_surface( 3+col*BRICK_WIDTH, 1+row*BRICK_HEIGHT, orange1, screen); IsLevelDone = false;    break;
+				case 2:  apply_surface( 3+col*BRICK_WIDTH, 1+row*BRICK_HEIGHT, green1, screen);  IsLevelDone = false;    break;
 				case 10: apply_surface( 3+col*BRICK_WIDTH, 1+row*BRICK_HEIGHT, unbreakable, screen); break;
 			}
 		}
 	}
+	if (IsLevelDone) LoadLevel();
 }
 
 double distance( int x1, int y1, int x2, int y2 )

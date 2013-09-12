@@ -27,10 +27,12 @@ public:
 
 class gameboard
 {
-	int level;
+	char level;
 	int matrix[16][9];
+	void LoadLevel();
 
 public:
+	bool level_done;
 	gameboard();
 	sides handlebricks(ball theball);
 	void showbricks();
@@ -44,9 +46,10 @@ class bar
 	std::list<ball*> balls;
 	bool doit;
 	SDL_Surface *ballcount;
-	gameboard bricks;
+	
 
 public:
+	gameboard bricks;
 	bar();
 	void handlebar();
 	void movebar();
